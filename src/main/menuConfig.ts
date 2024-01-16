@@ -1,4 +1,5 @@
-import { dialog, type App, type MenuItemConstructorOptions } from 'electron'
+import { dialog } from 'electron'
+import type { App, MenuItemConstructorOptions } from 'electron'
 import { workInMac } from './utils'
 
 export const getMenuTemplate: (app: App) => MenuItemConstructorOptions[] = (app) => [

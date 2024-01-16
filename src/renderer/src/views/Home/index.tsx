@@ -1,5 +1,7 @@
 import './style.less'
 
-export default () => {
+const Home = () => {
   return <>this is Home</>
 }
+
+export default Home

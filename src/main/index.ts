@@ -1,13 +1,13 @@
 import { join } from 'node:path'
-import { BrowserWindow, app, shell, ipcMain, Menu, globalShortcut } from 'electron'
+import { BrowserWindow, /* Menu, */ app, globalShortcut, ipcMain, shell } from 'electron'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
-import { getMenuTemplate } from './menuConfig'
+// import { getMenuTemplate } from './menuConfig'
 import { workInMac } from './utils'
 
 const setupMenu = () => {
-  const menu = Menu.buildFromTemplate(getMenuTemplate(app))
-  Menu.setApplicationMenu(menu)
+  // const menu = Menu.buildFromTemplate(getMenuTemplate(app))
+  // Menu.setApplicationMenu(menu)
 }
 
 const setupDevTools = (mainWindow: BrowserWindow) => {
@@ -15,9 +15,9 @@ const setupDevTools = (mainWindow: BrowserWindow) => {
 }
 
 const setupShortcut = () => {
-  globalShortcut.register('CommandOrControl+s', () => {
-    // todo
-  })
+  // globalShortcut.register('CommandOrControl+s', () => {
+  // todo
+  // })
 }
 
 const setupHMR = (mainWindow: BrowserWindow) => {
